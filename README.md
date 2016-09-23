@@ -1,7 +1,7 @@
-######CSCI 4448 Donation APP###### 
+#CSCI 4448 Donation APP 
 ####Groupmember:  
 Weipeng Cao, Zhi Li, Ming Liew, James Huynh
-#Description:  
+##Description:  
 A donation desktop application that provide a platform that connects donors and non-profit organizations. Donors can donate directly to non-profit organizations. Non-profit organizations set up a fundraising events and collect donations from donors. Non-profit organization can keep track of donation amounts and donors information.
 DIRECTORY STRUCTURE
 -------------------
