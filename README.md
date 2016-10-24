@@ -6,7 +6,7 @@ A donation desktop application that provide a platform that connects donors and 
 DIRECTORY STRUCTURE
 -------------------
 	<folder_name>/			folder content
-	       
+	nonprofit_donation/     applicaon folder       
 ## Instruction:
 
 ### system requirement: 
