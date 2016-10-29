@@ -9,6 +9,7 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+.idea
 
 # Eclipse Core
 .project
@@ -48,3 +49,6 @@ local.properties
 
 # Code Recommenders
 .recommenders/
+
+.idea/
+nonprofit_donation.iml
