@@ -6,6 +6,6 @@ package nonprofit_donation.usermisc;
 public class UserInfo {
     private String username;
     private String password;
-    private String at;
+    private int acc_type;
 
 }
