@@ -23,4 +23,8 @@ public class OrgProfile extends Profile {
     }
 
 
+    @Override
+    public void constructPanel(JPanel panel) {
+
+    }
 }

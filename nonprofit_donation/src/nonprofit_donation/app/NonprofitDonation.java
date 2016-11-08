@@ -18,7 +18,6 @@ public class NonprofitDonation {
 	public static void createWindow() {
 		mw = MainWindow.getMainWindow("NonProfit Donate");
 		mw.setVisible(true);
-		testDialog();
 	}
 
 	public static void testDialog() {

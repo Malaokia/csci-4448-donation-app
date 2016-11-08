@@ -19,4 +19,9 @@ public class DonorProfile extends Profile {
     public void disableUnameField(JPanel panel) {
 
     }
+
+    @Override
+    public void constructPanel(JPanel panel) {
+
+    }
 }

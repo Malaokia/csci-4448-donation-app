@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import nonprofit_donation.controller.Controller;
+import nonprofit_donation.usermisc.AccountInfo;
 
 public class MainWindow extends JFrame implements Controller {
 
@@ -15,14 +16,11 @@ public class MainWindow extends JFrame implements Controller {
     private static final long serialVersionUID = 1L;
 
     public static MainWindow mw = null;
+    private AccountInfo accinfo;
 
     private MainWindow(String title) {
         super(title);
         createDefaultWindow(title);
-
-    }
-
-    public static void setPanel(JPanel panel) {
 
     }
 
@@ -41,9 +39,55 @@ public class MainWindow extends JFrame implements Controller {
         this.setTitle(title);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultPanel();
+        this.pack();
+        this.setResizable(false);
+    }
+
+    private void setDefaultPanel() {
+        // replace with Login Panel
         JPanel panel = new JPanel();
         panel.setPreferredSize(new Dimension(600, 350));
-        this.setContentPane(panel);
-        this.pack();
+        setContentPane(panel);
     }
+
+    @Override
+    public void registerAcc() {
+
+    }
+
+    @Override
+    public void donate() {
+
+    }
+
+    @Override
+    public void loginUser() {
+
+    }
+
+    @Override
+    public void editProfile() {
+
+    }
+
+    @Override
+    public void createEvent() {
+
+    }
+
+    @Override
+    public void setPanel(JPanel panel) {
+
+    }
+    @Override
+    public void goHome() {
+
+    }
+
+    @Override
+    public AccountInfo getAccInfo() {
+        return null;
+    }
+
 }
