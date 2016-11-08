@@ -18,7 +18,7 @@ public class RegDialog extends JDialog implements ActionListener{
         createPanel();
     }
 
-    private void createPanel() {
+    private void createPanel(){
         GridBagConstraints c = new GridBagConstraints();
         JLabel label = new JLabel("<html><body><p>Choose the account type you want to create</p><br>(Default: Donor)</html></body>");
         JButton donor = new JButton("Donor");
@@ -41,7 +41,7 @@ public class RegDialog extends JDialog implements ActionListener{
         setVisible(true);
     }
 
-    @Override
+
     public void actionPerformed(ActionEvent actionEvent) {
         if(actionEvent.getActionCommand().equals("D")) acc_type = 0;
         else

@@ -26,6 +26,7 @@ public class RegPanel extends AppPanel{
 
     }
 
+
     public void clickConfirm() {
 
     }
@@ -41,4 +42,5 @@ public class RegPanel extends AppPanel{
     private void setDonor() {
 
     }
+
 }

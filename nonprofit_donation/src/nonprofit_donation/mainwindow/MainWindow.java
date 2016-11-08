@@ -8,10 +8,6 @@ import javax.swing.JPanel;
 import nonprofit_donation.controller.Controller;
 
 public class MainWindow extends JFrame implements Controller{
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	public static MainWindow mw = null;
@@ -19,7 +15,6 @@ public class MainWindow extends JFrame implements Controller{
 	private MainWindow(String title) {
 		super(title);
 		createDefaultWindow(title);
-		
 	}
 	
 	private void createDefaultWindow(String title) {
@@ -37,12 +32,10 @@ public class MainWindow extends JFrame implements Controller{
 	}
 	
 	public static MainWindow getMainWindow(String title) {
-		if(mw == null) {
+		if(mw == null)
 			mw = new MainWindow(title);
-		}
 		return mw;
 	}
-	
 	public static MainWindow getMainWindow() {
 		return mw;
 	}

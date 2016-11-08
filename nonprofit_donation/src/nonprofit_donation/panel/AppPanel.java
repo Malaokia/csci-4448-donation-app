@@ -11,10 +11,10 @@ import java.awt.event.ActionListener;
  */
 public abstract class AppPanel extends JPanel implements ActionListener{
     MainWindow mf;
-
+    /*
     @Override
     public abstract void actionPerformed(ActionEvent actionEvent);
-
+    */
     public abstract void constructPanel();
 
 }
