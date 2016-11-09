@@ -12,6 +12,5 @@ public abstract class Profile implements PanelConstructor{
     public String first_name;
     public String last_name;
     public String general_phone;
-
     abstract boolean isValid(JPanel panel);
 }

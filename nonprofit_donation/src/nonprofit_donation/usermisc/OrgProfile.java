@@ -18,12 +18,6 @@ public class OrgProfile extends Profile {
     }
 
     @Override
-    void disableUnameField(JPanel panel) {
-
-    }
-
-
-    @Override
     public void constructPanel(JPanel panel) {
 
     }

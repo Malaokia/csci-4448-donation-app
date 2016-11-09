@@ -24,21 +24,6 @@ public class DonorForm extends Form {
     }
 
     @Override
-    boolean isPassword() {
-        return false;
-    }
-
-    @Override
-    boolean isUpdateExist() {
-        return false;
-    }
-
-    @Override
-    boolean isUsername() {
-        return false;
-    }
-
-    @Override
     void attachMsg() {
     }
 
