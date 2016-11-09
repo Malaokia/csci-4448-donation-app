@@ -1,13 +1,17 @@
 package nonprofit_donation.controller;
 
+import nonprofit_donation.usermisc.AccountInfo;
+
+import javax.swing.*;
+
 public interface Controller {
-    /*
-    public void registerAcc();
-    public void donate();
-    public void loginUser();
-    public void editProfile();
-    public void createEvent();
-    public void setPanel(panel: JPanel);
-    public AccountInfo getAccInfo();
-    public void goHome();*/
+    void registerAcc();
+    void donate();
+    void loginUser();
+    void editProfile();
+    void createEvent();
+    void setPanel(JPanel panel);
+    AccountInfo getAccInfo();
+    void goHome();
+
 }

@@ -3,7 +3,7 @@ package nonprofit_donation.usermisc;
 /**
  * Created by weipeng on 11/1/16.
  */
-public class UserInfo {
+public class AccountInfo {
     private String username;
     private String password;
     private int acc_type;

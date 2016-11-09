@@ -29,7 +29,7 @@ public class NonprofitDonation {
 		AccountInfo acc_info = new AccountInfo(usr,pwd,acc);
 		System.out.println("Username:"+acc_info.getUsername()+"\n");
 		System.out.println("Password:"+acc_info.getPassword()+"\n");
-		System.out.println("Account Type:"+acc_info.getAccType()+"\n");
+		System.out.println("Account Type:"+acc_info.getAccType()+"\n");1
 	}
 	public static void testDialog() {
 		RegDialog dialog = new RegDialog(mw, true);
