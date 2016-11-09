@@ -16,8 +16,5 @@ public abstract class Form implements PanelConstructor{
 
     abstract boolean isValid(JPanel panel);
     abstract boolean isUpateValid(JPanel panel);
-    abstract boolean isUpdateExist();
-    abstract boolean isPassword();
-    abstract boolean isUsername();
     abstract void attachMsg();
 }
