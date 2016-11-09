@@ -16,7 +16,7 @@ public class AccountInfo {
         return password;
     }
 
-    public int getAcc_type() {
+    public int getAccType() {
         return acc_type;
     }
 

@@ -6,6 +6,7 @@ import javax.swing.*;
 /**
  * Created by weipeng on 11/7/16.
  */
+
 public class DonorForm extends Form {
     @Override
     public void constructPanel(JPanel panel) {
@@ -20,6 +21,25 @@ public class DonorForm extends Form {
     @Override
     boolean isUpateValid(JPanel panel) {
         return false;
+    }
+
+    @Override
+    boolean isPassword() {
+        return false;
+    }
+
+    @Override
+    boolean isUpdateExist() {
+        return false;
+    }
+
+    @Override
+    boolean isUsername() {
+        return false;
+    }
+
+    @Override
+    void attachMsg() {
     }
 
 }

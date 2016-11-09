@@ -15,6 +15,6 @@ public abstract class AppPanel extends JPanel implements ActionListener{
     @Override
     public abstract void actionPerformed(ActionEvent actionEvent);
     */
-    public abstract void constructPanel();
+    abstract void constructPanel();
 
 }

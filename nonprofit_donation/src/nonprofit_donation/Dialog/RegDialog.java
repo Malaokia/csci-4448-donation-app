@@ -41,7 +41,6 @@ public class RegDialog extends JDialog implements ActionListener{
         setVisible(true);
     }
 
-
     public void actionPerformed(ActionEvent actionEvent) {
         if(actionEvent.getActionCommand().equals("D")) acc_type = 0;
         else
