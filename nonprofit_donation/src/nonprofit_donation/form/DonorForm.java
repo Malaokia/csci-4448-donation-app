@@ -1,6 +1,8 @@
 package nonprofit_donation.form;
 
 
+import database.Query;
+
 import javax.swing.*;
 
 /**
@@ -23,8 +25,21 @@ public class DonorForm extends Form {
         return false;
     }
 
-    @Override
     void attachMsg() {
     }
 
+    @Override
+    public Query getSearchQuery() {
+        return null;
+    }
+
+    @Override
+    public Query getInsertQuery() {
+        return null;
+    }
+
+    @Override
+    public Query getUpdateQuery() {
+        return null;
+    }
 }
