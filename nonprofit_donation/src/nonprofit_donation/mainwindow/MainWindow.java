@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import nonprofit_donation.controller.Controller;
+import nonprofit_donation.panel.RegPanel;
 import nonprofit_donation.usermisc.AccountInfo;
 
 public class MainWindow extends JFrame implements Controller {
@@ -46,8 +47,7 @@ public class MainWindow extends JFrame implements Controller {
 
     private void setDefaultPanel() {
         // replace with Login Panel
-        JPanel panel = new JPanel();
-        panel.setPreferredSize(new Dimension(600, 350));
+        JPanel panel = new RegPanel(this);
         setContentPane(panel);
     }
 

@@ -1,6 +1,7 @@
 package nonprofit_donation.Dialog;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,21 +21,23 @@ public class RegDialog extends JDialog implements ActionListener{
 
     private void createPanel(){
         GridBagConstraints c = new GridBagConstraints();
-        JLabel label = new JLabel("<html><body><p>Choose the account type you want to create</p><br>(Default: Donor)</html></body>");
+        JLabel label = new JLabel("<html><body><p>Choose the account type you want to create<br>(Default: <b>Donor</b>)</p></html></body>");
         JButton donor = new JButton("Donor");
         JButton org = new JButton("Organization");
-        JPanel but_panel = new JPanel(new GridLayout(1, 6));
+        JPanel btn_panel = new JPanel(new GridLayout(1,2,10,2));
         JPanel layoutPanel = new JPanel(new BorderLayout(5, 5));
+        layoutPanel.setBorder(new EmptyBorder(20,20,20,20));
+        btn_panel.setBorder(new EmptyBorder(10,10,10,10));
         layoutPanel.add(label, BorderLayout.CENTER);
         donor.setActionCommand("D");
         org.setActionCommand("O");
         donor.addActionListener(this);
         org.addActionListener(this);
 
-        but_panel.add(donor);
-        but_panel.add(org);
+        btn_panel.add(donor);
+        btn_panel.add(org);
 
-        layoutPanel.add(but_panel, BorderLayout.PAGE_END);
+        layoutPanel.add(btn_panel, BorderLayout.PAGE_END);
         setContentPane(layoutPanel);
         pack();
         setLocationRelativeTo(null);

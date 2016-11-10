@@ -1,7 +1,9 @@
 package nonprofit_donation.panel;
 
 import nonprofit_donation.Dialog.RegDialog;
+import nonprofit_donation.form.DonorForm;
 import nonprofit_donation.form.Form;
+import nonprofit_donation.form.OrgForm;
 import nonprofit_donation.mainwindow.MainWindow;
 
 import javax.swing.*;
@@ -12,24 +14,22 @@ import java.awt.event.ActionEvent;
  */
 public class RegPanel extends AppPanel{
     Form req_form;
-    int acctype;
+    int acc_type;
 
     public RegPanel(MainWindow mf) {
         super();
         this.mf = mf;
-        req_form = chooseAccType();
+        chooseAccType();
         constructPanel();
-        JButton btn = new JButton("Conform");
-        add(btn);
         mf.setContentPane(this);
     }
 
-    Form chooseAccType() {
+    void chooseAccType() {
         RegDialog dialog = new RegDialog(this.mf, true);
         if(dialog.getAcc_type() == 0)
-            return null;
+            req_form = new DonorForm();
         else
-            return null;
+            req_form = new OrgForm();
     }
 
     @Override

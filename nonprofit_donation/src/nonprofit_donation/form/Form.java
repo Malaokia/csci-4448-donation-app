@@ -12,8 +12,8 @@ import javax.swing.*;
  */
 
 public abstract class Form implements PanelConstructor, Queryable {
-    AccountInfo acc_info;
-    Integer type;
+    protected AccountInfo acc_info;
+    protected Integer type;
 
     abstract boolean isValid(JPanel panel);
     abstract boolean isUpateValid(JPanel panel);

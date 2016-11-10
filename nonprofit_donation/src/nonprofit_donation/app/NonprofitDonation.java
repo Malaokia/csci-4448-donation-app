@@ -17,10 +17,10 @@ public class NonprofitDonation {
 	public static void createWindow() {
 		mw = MainWindow.getMainWindow("NonProfit Donate");
 		mw.setVisible(true);
-		testDialog();
+		//testDialog();
         /*return acctype, username and password, so
         that i can stored it in AccountInfo*/
-        testAccountInfo();
+        //testAccountInfo();
 	}
 	public static void testAccountInfo(){
 		String usr = "spiderman";
