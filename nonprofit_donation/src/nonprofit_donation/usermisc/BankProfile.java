@@ -1,4 +1,4 @@
-package nonprofit_donation.profile;
+package nonprofit_donation.usermisc;
 
 /**
  * Created by mql-intelli on 11/8/16.

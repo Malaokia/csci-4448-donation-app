@@ -7,6 +7,7 @@ import nonprofit_donation.form.OrgForm;
 import nonprofit_donation.mainwindow.MainWindow;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 /**
@@ -44,7 +45,7 @@ public class RegPanel extends AppPanel{
 
 
     public void clickConfirm() {
-
+        System.out.println("Confirm is clicked");
     }
 
     private void updateForm() {

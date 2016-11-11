@@ -2,9 +2,8 @@ package nonprofit_donation.form;
 
 
 import database.Query;
-import nonprofit_donation.profile.DonorProfile;
+import nonprofit_donation.usermisc.DonorProfile;
 
-import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.AttributeSet;
@@ -12,8 +11,6 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 /**
  * Created by weipeng on 11/7/16.
@@ -23,6 +20,10 @@ public class DonorForm extends Form {
     DonorProfile profile;
     private JTextField tf_usrname;
     private JPasswordField pf_passwd;
+
+    public DonorForm() {
+        profile = new DonorProfile();
+    }
 
     @Override
     public void constructPanel(JPanel panel) {
@@ -73,7 +74,8 @@ public class DonorForm extends Form {
 
         panel.add(p_usrname);
         panel.add(p_passwd);
-        panel.add(btn_conform);
+
+        profile.constructPanel(panel);
     }
 
     @Override
