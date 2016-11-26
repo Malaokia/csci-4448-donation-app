@@ -7,13 +7,19 @@ DIRECTORY STRUCTURE
 -------------------
 	<folder_name>/			folder content
 	nonprofit_donation/     applicaon folder       
+
+
 ## Instruction:
+Errors(see below)
+
+Build:
+1. Setup the environment as below
+2. 
 
 ### system requirement: 
-1. pt1
-2. pt2
-  1. pt2-1
-  2. pt2-2
+1. Java 1.8
+2. Intellij
+  1. GUI Former
 3. pt3
 4. pt4
 
@@ -29,5 +35,8 @@ DIRECTORY STRUCTURE
 ### Run Test: (need to setup see README.md @basic/tests)
 -
 
+
+###  Errors:
+@Override with waveline: File->Project Structure->Project->Project language level: SDK default
 
 
