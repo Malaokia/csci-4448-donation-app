@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 /**
  * Created by wwcao on 11/10/16.
  */
-public class RegProfilePanel {
+public class RegDonorProfilePanel {
     private JPanel panel;
     private JTextField lastname;
     private JTextField address;

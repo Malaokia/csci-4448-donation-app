@@ -1,6 +1,7 @@
 package nonprofit_donation.usermisc;
 
-import nonprofit_donation.panel.RegProfilePanel;
+import nonprofit_donation.panel.RegDonorProfilePanel;
+import nonprofit_donation.panel.RegPanel;
 
 import javax.swing.*;
 import javax.swing.text.Document;
@@ -13,10 +14,10 @@ public class DonorProfile extends Profile {
     public String cc_cvn;
     public String cc_num;
     public String cc_exp;
-    RegProfilePanel rp_panel;
+    RegDonorProfilePanel rp_panel;
 
     public DonorProfile() {
-        rp_panel = new RegProfilePanel();
+        rp_panel = new RegDonorProfilePanel();
     }
 
     public DonorProfile(Document doc) {
@@ -30,6 +31,6 @@ public class DonorProfile extends Profile {
 
     @Override
     public void constructPanel(JPanel panel) {
-        panel.add(rp_panel.getPanel((ActionListener) panel));
+        ((RegPanel)panel).setProfilePanel(rp_panel.getPanel(((ActionListener) panel)));
     }
 }

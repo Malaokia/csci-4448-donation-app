@@ -2,6 +2,9 @@ package nonprofit_donation.form;
 
 
 import database.Query;
+import nonprofit_donation.panel.RegPanel;
+import nonprofit_donation.panel.UserInfoPanel;
+import nonprofit_donation.usermisc.AccountInfo;
 import nonprofit_donation.usermisc.DonorProfile;
 
 import javax.swing.*;
@@ -18,63 +21,17 @@ import java.awt.event.ActionListener;
 
 public class DonorForm extends Form {
     DonorProfile profile;
-    private JTextField tf_usrname;
-    private JPasswordField pf_passwd;
+    //AccountInfo accinfo;
+    UserInfoPanel userinfo_panel;
 
     public DonorForm() {
         profile = new DonorProfile();
+        userinfo_panel = new UserInfoPanel();
     }
 
     @Override
     public void constructPanel(JPanel panel) {
-
-        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-        panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-
-        JButton conform = new JButton("Conform");
-        conform.addActionListener((ActionListener) panel);
-
-
-        JLabel label_usrname = new JLabel("Username");
-        JLabel label_passwd = new JLabel("Password");
-        tf_usrname = new JTextField();
-        tf_usrname.setPreferredSize(new Dimension(200, 25));
-        tf_usrname.setDocument(new PlainDocument() {
-            public void insertString(int offset, String str, AttributeSet attr) throws BadLocationException {
-                if (str == null)
-                    return;
-
-                if ((getLength() + str.length()) < 15) {
-                    super.insertString(offset, str, attr);
-                }
-            }
-        });
-        pf_passwd = new JPasswordField();
-        pf_passwd.setPreferredSize(new Dimension(200, 25));
-        pf_passwd.setDocument(new PlainDocument() {
-            public void insertString(int offset, String str, AttributeSet attr) throws BadLocationException {
-                if (str == null)
-                    return;
-
-                if ((getLength() + str.length()) < 15) {
-                    super.insertString(offset, str, attr);
-                }
-            }
-        });
-
-        JPanel p_usrname = new JPanel();
-        p_usrname.add(label_usrname);
-        p_usrname.add(tf_usrname);
-        JPanel p_passwd = new JPanel();
-        p_passwd.add(label_passwd);
-        p_passwd.add(pf_passwd);
-
-        JButton btn_conform = new JButton("Conform");
-        btn_conform.addActionListener((ActionListener) panel);
-
-        panel.add(p_usrname);
-        panel.add(p_passwd);
-
+        ((RegPanel)panel).setUserInfopanel(userinfo_panel.getPanel());
         profile.constructPanel(panel);
     }
 

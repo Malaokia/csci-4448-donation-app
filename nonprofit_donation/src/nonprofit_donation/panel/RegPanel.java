@@ -7,6 +7,7 @@ import nonprofit_donation.form.OrgForm;
 import nonprofit_donation.mainwindow.MainWindow;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
@@ -15,6 +16,8 @@ import java.awt.event.ActionEvent;
  */
 public class RegPanel extends AppPanel{
     Form req_form;
+    JPanel panel_userinfo;
+    JPanel panel_profile;
     int acc_type;
 
     public RegPanel(MainWindow mf) {
@@ -22,7 +25,6 @@ public class RegPanel extends AppPanel{
         this.mf = mf;
         chooseAccType();
         constructPanel();
-        mf.setContentPane(this);
     }
 
     void chooseAccType() {
@@ -40,24 +42,37 @@ public class RegPanel extends AppPanel{
 
     @Override
     public void constructPanel() {
+        JPanel p = new JPanel();
+        setLayout(new BorderLayout());
         req_form.constructPanel(this);
+        p.setBorder(BorderFactory.createEmptyBorder(20, 0, 0,0));
+        p.add(panel_userinfo);
+        this.add(p, BorderLayout.CENTER);
+        this.add(panel_profile, BorderLayout.SOUTH);
     }
 
 
     public void clickConfirm() {
-        System.out.println("Confirm is clicked");
+        mf.loginUser();
     }
 
     private void updateForm() {
 
     }
 
-    private void setOrganization() {
-
+    public JPanel getUserinfoPanel() {
+        return panel_userinfo;
     }
 
-    private void setDonor() {
-
+    public void setUserInfopanel(JPanel p) {
+        panel_userinfo = p;
     }
 
+    public JPanel getProfilePanel() {
+        return panel_profile;
+    }
+
+    public void setProfilePanel(JPanel p) {
+        panel_profile = p;
+    }
 }

@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import nonprofit_donation.controller.Controller;
+import nonprofit_donation.panel.LoginPanel;
 import nonprofit_donation.panel.RegPanel;
 import nonprofit_donation.usermisc.AccountInfo;
 
@@ -47,13 +48,13 @@ public class MainWindow extends JFrame implements Controller {
 
     private void setDefaultPanel() {
         // replace with Login Panel
-        JPanel panel = new RegPanel(this);
-        setContentPane(panel);
+        loginUser();
     }
 
     @Override
     public void registerAcc() {
-
+        JPanel panel = new RegPanel(this);
+        setPanel(panel);
     }
 
     @Override
@@ -63,7 +64,8 @@ public class MainWindow extends JFrame implements Controller {
 
     @Override
     public void loginUser() {
-
+        JPanel panel = new LoginPanel(this);
+        setPanel(panel);
     }
 
     @Override
@@ -78,11 +80,13 @@ public class MainWindow extends JFrame implements Controller {
 
     @Override
     public void setPanel(JPanel panel) {
-
+        setContentPane(panel);
+        pack();
     }
+
     @Override
     public void goHome() {
-
+        System.out.println("In goHome()");
     }
 
     @Override
