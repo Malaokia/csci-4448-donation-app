@@ -18,9 +18,11 @@ public class RegDonorProfilePanel {
     private JTextField firstname;
     private JButton btn_confirm;
     private JPasswordField ccv_num;
+    private JButton btn_back;
 
     public JPanel getPanel(ActionListener al) {
         btn_confirm.addActionListener(al);
+        btn_back.addActionListener(al);
         return panel;
     }
 

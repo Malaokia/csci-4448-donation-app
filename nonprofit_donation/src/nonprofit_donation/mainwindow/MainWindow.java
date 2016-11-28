@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import nonprofit_donation.controller.Controller;
+import nonprofit_donation.panel.HomePanel;
 import nonprofit_donation.panel.LoginPanel;
 import nonprofit_donation.panel.RegPanel;
 import nonprofit_donation.usermisc.AccountInfo;
@@ -22,6 +23,7 @@ public class MainWindow extends JFrame implements Controller {
 
     private MainWindow(String title) {
         super(title);
+        accinfo = new AccountInfo();
         createDefaultWindow(title);
 
     }
@@ -39,16 +41,22 @@ public class MainWindow extends JFrame implements Controller {
 
     private void createDefaultWindow(String title) {
         this.setTitle(title);
-        this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         setDefaultPanel();
         this.pack();
         this.setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     private void setDefaultPanel() {
         // replace with Login Panel
         loginUser();
+    }
+
+    @Override
+    public void loginUser() {
+        JPanel panel = new LoginPanel(this);
+        setPanel(panel);
     }
 
     @Override
@@ -58,14 +66,14 @@ public class MainWindow extends JFrame implements Controller {
     }
 
     @Override
+    public void goHome() {
+        System.out.println("In goHome()");
+        JPanel panel = new HomePanel(this);
+        setPanel(panel);
+    }
+    @Override
     public void donate() {
 
-    }
-
-    @Override
-    public void loginUser() {
-        JPanel panel = new LoginPanel(this);
-        setPanel(panel);
     }
 
     @Override
@@ -85,13 +93,12 @@ public class MainWindow extends JFrame implements Controller {
     }
 
     @Override
-    public void goHome() {
-        System.out.println("In goHome()");
+    public AccountInfo getAccInfo() {
+        return accinfo;
     }
 
-    @Override
-    public AccountInfo getAccInfo() {
-        return null;
+    public void setAccInfo(AccountInfo accinfo) {
+        AccountInfo.copyAccInfo(this.accinfo, accinfo);
     }
 
 }

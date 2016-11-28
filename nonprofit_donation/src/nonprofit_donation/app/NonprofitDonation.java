@@ -1,5 +1,5 @@
 package nonprofit_donation.app;
-import nonprofit_donation.Dialog.RegDialog;
+import nonprofit_donation.dialog.RegDialog;
 import nonprofit_donation.mainwindow.MainWindow;
 import nonprofit_donation.usermisc.AccountInfo;
 

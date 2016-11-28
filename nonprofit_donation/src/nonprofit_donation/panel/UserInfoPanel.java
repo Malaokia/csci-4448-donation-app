@@ -1,5 +1,7 @@
 package nonprofit_donation.panel;
 
+import nonprofit_donation.usermisc.AccountInfo;
+
 import javax.swing.*;
 
 /**
@@ -7,9 +9,15 @@ import javax.swing.*;
  */
 public class UserInfoPanel {
     private JPanel panel1;
-    private JTextField textField1;
+    private JTextField textUsername;
+    private JTextField textPassword;
 
     public JPanel getPanel() {
         return panel1;
+    }
+
+    public void getUserInput(AccountInfo accinfo) {
+        accinfo.setPassword(textPassword.getText());
+        accinfo.setUsername(textUsername.getText());
     }
 }

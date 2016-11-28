@@ -53,7 +53,11 @@ public class LoginPanel extends AppPanel {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().toString().equals("Login")) {
-            mf.goHome();
+            if(((LoginForm)login_form).isValid(this)) {
+                System.out.println(((LoginForm)login_form).getAccountInfo().toString());
+                mf.setAccInfo(((LoginForm) login_form).getAccountInfo());
+                mf.goHome();
+            }
         }
         else {
             mf.registerAcc();

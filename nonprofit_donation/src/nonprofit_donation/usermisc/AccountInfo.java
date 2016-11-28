@@ -32,4 +32,13 @@ public class AccountInfo {
         this.acc_type = acc_type;
     }
 
+    public static void copyAccInfo(AccountInfo dest, AccountInfo src) {
+        dest.setUsername(src.getUsername());
+        //dest.setPassword(src.getPassword());
+        dest.setPassword("**********");
+        dest.setAcc_type(src.getAccType());
+    }
+    public String toString() {
+        return "<" + username + ", " + password + ", " + acc_type +">";
+    }
 }

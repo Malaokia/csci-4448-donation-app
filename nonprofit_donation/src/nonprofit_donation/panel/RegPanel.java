@@ -1,13 +1,12 @@
 package nonprofit_donation.panel;
 
-import nonprofit_donation.Dialog.RegDialog;
+import nonprofit_donation.dialog.RegDialog;
 import nonprofit_donation.form.DonorForm;
 import nonprofit_donation.form.Form;
 import nonprofit_donation.form.OrgForm;
 import nonprofit_donation.mainwindow.MainWindow;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
@@ -37,7 +36,10 @@ public class RegPanel extends AppPanel{
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-       clickConfirm();
+        if(actionEvent.getActionCommand().equals("CONFORM"))
+            clickConfirm();
+        else
+            clickCancel();
     }
 
     @Override
@@ -53,6 +55,10 @@ public class RegPanel extends AppPanel{
 
 
     public void clickConfirm() {
+        mf.loginUser();
+    }
+    public void clickCancel() {
+
         mf.loginUser();
     }
 

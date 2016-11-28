@@ -1,4 +1,4 @@
-package nonprofit_donation.Dialog;
+package nonprofit_donation.dialog;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
