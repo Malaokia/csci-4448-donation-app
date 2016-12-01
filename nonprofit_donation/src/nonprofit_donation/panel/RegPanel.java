@@ -26,6 +26,14 @@ public class RegPanel extends AppPanel{
         constructPanel();
     }
 
+    public RegPanel(MainWindow mf, Form form) {
+        super();
+        this.mf = mf;
+        //chooseAccType();
+        req_form = form;
+        constructPanel();
+    }
+
     void chooseAccType() {
         RegDialog dialog = new RegDialog(this.mf, true);
         if(dialog.getAcc_type() == 0)

@@ -22,6 +22,7 @@ public class DonnorHomePanel extends HomePanelController{
         editProfileButton.addActionListener((ActionListener) hp);
         logoutButton.addActionListener((ActionListener) hp);
         clickToViewEventsButton.setActionCommand("Show");
+        editProfileButton.setActionCommand("Edit");
         clickToViewEventsButton.addActionListener((ActionListener) hp);
     }
 

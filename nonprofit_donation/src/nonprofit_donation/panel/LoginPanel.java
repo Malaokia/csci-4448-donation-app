@@ -1,6 +1,5 @@
 package nonprofit_donation.panel;
 
-import com.sun.javafx.font.FontFactory;
 import nonprofit_donation.form.Form;
 import nonprofit_donation.form.LoginForm;
 import nonprofit_donation.mainwindow.MainWindow;
@@ -8,7 +7,6 @@ import nonprofit_donation.mainwindow.MainWindow;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * Created by wwcao on 11/5/16.
