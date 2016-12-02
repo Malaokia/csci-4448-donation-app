@@ -1,16 +1,34 @@
 #CSCI 4448 Donation APP 
 ####Groupmember:  
 Weipeng Cao, Zhi Li, Ming Liew, James Huynh
+
 ##Description:  
 A donation desktop application that provide a platform that connects donors and non-profit organizations. Donors can donate directly to non-profit organizations. Non-profit organizations set up a fundraising events and collect donations from donors. Non-profit organization can keep track of donation amounts and donors information.
 DIRECTORY STRUCTURE
 -------------------
+
 	<folder_name>/			folder content
-	nonprofit_donation/     applicaon folder       
+	nonprofit_donation/     	applicaon folder   
+	src/				source code
+		database/			database source code
+			DBManger/		Database Manager code that onnect to 
+			Query/			Query
+			Queryable/		Query Interface
+			
+		nonprofit_donation		folder that contains app code
+			app/			Main() class
+			controller/		contain controller interface
+			dialog/			dialog class
+			form/			form class			
+			mainwindow/		MainWindow class
+			panel/			contain interface and class file and gGUI panel
+			usermisc/		contain profile and Accountinfo class
+	
+	
 
 
 ## Instruction:
-Errors(see below)
+Run NonprofitDonation.java
 
 Build:
 1. Setup the environment as below
