@@ -14,23 +14,27 @@ import java.awt.event.ActionEvent;
  * Created by wwcao on 11/5/16.
  */
 public class RegPanel extends AppPanel{
+    boolean isReg;
     Form req_form;
     JPanel panel_userinfo;
     JPanel panel_profile;
     int acc_type;
+    JDialog editdialog;
 
     public RegPanel(MainWindow mf) {
         super();
+        isReg = true;
         this.mf = mf;
         chooseAccType();
         constructPanel();
     }
 
-    public RegPanel(MainWindow mf, Form form) {
-        super();
+    public RegPanel(MainWindow mf, Form form, JDialog dialog) {
+        isReg = false;
         this.mf = mf;
         //chooseAccType();
         req_form = form;
+        editdialog = dialog;
         constructPanel();
     }
 
@@ -63,11 +67,21 @@ public class RegPanel extends AppPanel{
 
 
     public void clickConfirm() {
-        mf.loginUser();
+        if(isReg) {
+            mf.loginUser();
+        }
+        else {
+            editdialog.dispose();
+        }
     }
-    public void clickCancel() {
 
-        mf.loginUser();
+    public void clickCancel() {
+        if(isReg) {
+            mf.loginUser();
+        }
+        else {
+            editdialog.dispose();
+        }
     }
 
     private void updateForm() {

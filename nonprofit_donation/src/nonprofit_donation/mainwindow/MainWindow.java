@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import nonprofit_donation.controller.Controller;
+import nonprofit_donation.dialog.ProfileDialog;
 import nonprofit_donation.panel.HomePanel;
 import nonprofit_donation.panel.LoginPanel;
 import nonprofit_donation.panel.RegPanel;
@@ -23,7 +24,6 @@ public class MainWindow extends JFrame implements Controller {
 
     private MainWindow(String title) {
         super(title);
-        accinfo = new AccountInfo();
         createDefaultWindow(title);
 
     }
@@ -55,13 +55,16 @@ public class MainWindow extends JFrame implements Controller {
 
     @Override
     public void loginUser() {
+        accinfo = new AccountInfo();
         JPanel panel = new LoginPanel(this);
+        setTitle("NonProfit App");
         setPanel(panel);
     }
 
     @Override
     public void registerAcc() {
         JPanel panel = new RegPanel(this);
+        setTitle("NonProfit App");
         setPanel(panel);
     }
 
@@ -69,6 +72,7 @@ public class MainWindow extends JFrame implements Controller {
     public void goHome() {
         System.out.println("In goHome()");
         JPanel panel = new HomePanel(this);
+        setTitle(accinfo.prepareTitle());
         setPanel(panel);
     }
     @Override
@@ -78,7 +82,7 @@ public class MainWindow extends JFrame implements Controller {
 
     @Override
     public void editProfile() {
-
+        (new ProfileDialog(this,true)).setVisible(true);
     }
 
     @Override

@@ -41,4 +41,14 @@ public class AccountInfo {
     public String toString() {
         return "<" + username + ", " + password + ", " + acc_type +">";
     }
+
+    public String accTypeToString() {
+        if(acc_type == 0) return "Donor";
+        if(acc_type > 0) return "Organiation";
+        return "Demo";
+    }
+
+    public String prepareTitle() {
+        return accTypeToString() + ": " + getUsername();
+    }
 }
