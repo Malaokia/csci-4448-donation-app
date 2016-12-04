@@ -17,6 +17,7 @@ public class RegDialog extends JDialog implements ActionListener{
         acc_type = 0;
         this.setTitle("Choose Account Type:");
         createPanel();
+        setLocationRelativeTo(f);
     }
 
     private void createPanel(){

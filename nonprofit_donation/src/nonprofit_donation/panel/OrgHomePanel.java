@@ -7,8 +7,8 @@ import javax.swing.*;
  */
 public class OrgHomePanel {
     private JPanel panel1;
-    private JButton btnViewHist;
     private JButton viewHistoryButton;
     private JButton editProfileButton;
-    private JButton logoutButton;
+    private JButton logOutButton;
+    private JButton createEventButton;
 }
