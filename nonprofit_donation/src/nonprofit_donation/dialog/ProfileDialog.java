@@ -20,6 +20,7 @@ public class ProfileDialog extends JDialog{
         setLocationRelativeTo(mw);
     }
 
+
     public void createProfile(MainWindow mw, int type){
         if(type <= 0) {
             form = new DonorForm();

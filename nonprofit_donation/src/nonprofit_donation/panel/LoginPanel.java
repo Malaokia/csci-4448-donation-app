@@ -25,10 +25,19 @@ public class LoginPanel extends AppPanel {
 
     @Override
     void constructPanel() {
-        this.setLayout(new BorderLayout(5,5));
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         login_form.constructPanel(this);
+
+        ImageIcon img = new ImageIcon("src/mlove.png");
+        JLabel label = new JLabel("", img, JLabel.CENTER);
+        label.setMinimumSize(new Dimension(50,50));
+        JPanel imgPanel = new JPanel();
+        imgPanel.add(label);
+
+        add(imgPanel);
+
         JPanel mp = new JPanel();
-        mp.setBorder(BorderFactory.createEmptyBorder(200,5,5,5));
+        mp.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
         mp.add(panel_userinfo);
 
         Dimension d = new Dimension(40, 20);
@@ -45,6 +54,7 @@ public class LoginPanel extends AppPanel {
 
         this.add(mp, BorderLayout.CENTER);
         this.add(btnp, BorderLayout.SOUTH);
+
         setPreferredSize(new Dimension(300,400));
     }
 
