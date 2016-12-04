@@ -14,7 +14,7 @@ import javax.swing.*;
 public class ProfileDialog extends JDialog{
     Form form;
     JPanel conPanel;
-    public ProfileDialog(MainWindow mw, boolean visible){
+    public ProfileDialog(MainWindow mw){
         createProfile(mw, mw.getAccInfo().getAccType());
         createUI();
         setLocationRelativeTo(mw);

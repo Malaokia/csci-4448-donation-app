@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import nonprofit_donation.controller.Controller;
+import nonprofit_donation.dialog.EventDialog;
 import nonprofit_donation.dialog.ProfileDialog;
 import nonprofit_donation.panel.HomePanel;
 import nonprofit_donation.panel.LoginPanel;
@@ -82,12 +83,12 @@ public class MainWindow extends JFrame implements Controller {
 
     @Override
     public void editProfile() {
-        (new ProfileDialog(this,true)).setVisible(true);
+        (new ProfileDialog(this)).setVisible(true);
     }
 
     @Override
     public void createEvent() {
-
+        (new EventDialog(this)).setVisible(true);
     }
 
     @Override

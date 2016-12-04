@@ -30,7 +30,8 @@ public class LoginPanel extends AppPanel {
 
         ImageIcon img = new ImageIcon("src/mlove.png");
         JLabel label = new JLabel("", img, JLabel.CENTER);
-        label.setMinimumSize(new Dimension(50,50));
+        //label.setMinimumSize(new Dimension(50,50));
+        label.setMinimumSize(new Dimension(img.getIconWidth(), img.getIconHeight()));
         JPanel imgPanel = new JPanel();
         imgPanel.add(label);
 
@@ -49,13 +50,14 @@ public class LoginPanel extends AppPanel {
         regbtn.addActionListener(this);
         loginbtn.setMinimumSize(d);
         regbtn.setMinimumSize(d);
+        loginbtn.setMaximumSize(d);
+        regbtn.setMaximumSize(d);
         btnp.add(loginbtn);
         btnp.add(regbtn);
 
-        this.add(mp, BorderLayout.CENTER);
-        this.add(btnp, BorderLayout.SOUTH);
-
-        setPreferredSize(new Dimension(300,400));
+        add(mp, BorderLayout.CENTER);
+        add(btnp, BorderLayout.SOUTH);
+        //setPreferredSize(new Dimension(300,400));
     }
 
     @Override

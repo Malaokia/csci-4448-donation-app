@@ -3,6 +3,8 @@ import nonprofit_donation.dialog.RegDialog;
 import nonprofit_donation.mainwindow.MainWindow;
 import nonprofit_donation.usermisc.AccountInfo;
 
+import javax.swing.*;
+
 public class NonprofitDonation {
 	static MainWindow mw;
 
@@ -16,11 +18,23 @@ public class NonprofitDonation {
 	
 	public static void createWindow() {
 		mw = MainWindow.getMainWindow("NonProfit Donate");
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		}
+		catch (UnsupportedLookAndFeelException e) {
+
+		}
+		catch (ClassNotFoundException e) {
+			// handle exception
+		}
+		catch (InstantiationException e) {
+			// handle exception
+		}
+		catch (IllegalAccessException e) {
+			// handle exception
+		}
 		mw.setVisible(true);
-		//testDialog();
-        /*return acctype, username and password, so
-        that i can stored it in AccountInfo*/
-        //testAccountInfo();
+
 	}
 	public static void testAccountInfo(){
 		String usr = "spiderman";

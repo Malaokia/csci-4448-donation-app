@@ -46,6 +46,10 @@ public class LoginForm extends Form {
             acc_info.setAcc_type(-1);
             return true;
         }
+        else if(acc_info.getUsername().equals("organization")) {
+            acc_info.setAcc_type(1);
+            return true;
+        }
         else {
             System.out.println(acc_info.getUsername()+","+acc_info.getPassword());
         }

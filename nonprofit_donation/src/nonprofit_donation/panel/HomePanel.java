@@ -18,8 +18,6 @@ public class HomePanel extends AppPanel {
     HomePanelController hpc;
 
     public HomePanel(MainWindow mf) {
-        setPreferredSize(new Dimension(960, 720));
-        hpc = new DonnorHomePanel(this);
         this.mf = mf;
         constructPanel();
     }
@@ -29,9 +27,12 @@ public class HomePanel extends AppPanel {
         int accType = mf.getAccInfo().getAccType();
         if(accType <= 0){
             setLayout(new GridLayout(1,2));
+            setPreferredSize(new Dimension(960, 720));
+            hpc = new DonnorHomePanel(this);
             createDonorHomePanel(true);
         }
         else {
+            hpc = new OrgHomePanel(this);
             createOrgHomePanel();
         }
     }
@@ -67,21 +68,38 @@ public class HomePanel extends AppPanel {
     }
 
     private void createOrgHomePanel() {
-
+        add(hpc.getMainPanel());
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("Edit")){
-            mf.editProfile();
-            //(new ProfileDialog(mf,true)).setVisible(true);
+        if(mf.getAccInfo().getAccType() <= 0) {
+            if (e.getActionCommand().equals("Edit")) {
+                mf.editProfile();
+                //(new ProfileDialog(mf,true)).setVisible(true);
+            } else if (e.getActionCommand().equals("View")) {
+                JDialog dialog = new JDialog(mf);
+                createDonorHomePanel(false);
+            }
+            else if (e.getActionCommand().equals("History")) {
+
+            }
+            else if (e.getActionCommand().equals("Logout")) {
+                mf.loginUser();
+            }
         }
-        else if (e.getActionCommand().equals("View")) {
-            JDialog dialog = new JDialog(mf);
-            createDonorHomePanel(false);
-        }
-        else if (e.getActionCommand().equals("Logout")) {
-            mf.loginUser();
+        else {
+            if (e.getActionCommand().equals("Create")) {
+                mf.createEvent();
+            } else if (e.getActionCommand().equals("Edit")) {
+
+            }
+            else if (e.getActionCommand().equals("History")) {
+
+            }
+            else if (e.getActionCommand().equals("Logout")) {
+                mf.loginUser();
+            }
         }
     }
 }

@@ -16,11 +16,11 @@ public class RegDialog extends JDialog implements ActionListener{
         super(f, visible);
         acc_type = 0;
         this.setTitle("Choose Account Type:");
-        createPanel();
+        createDialog();
         setLocationRelativeTo(f);
     }
 
-    private void createPanel(){
+    private void createDialog(){
         GridBagConstraints c = new GridBagConstraints();
         JLabel label = new JLabel("<html><body><p>Choose the account type you want to create<br>(Default: <b>Donor</b>)</p></html></body>");
         JButton donor = new JButton("Donor");
