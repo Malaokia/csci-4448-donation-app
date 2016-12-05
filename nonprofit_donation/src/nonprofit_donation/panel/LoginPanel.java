@@ -3,6 +3,7 @@ package nonprofit_donation.panel;
 import nonprofit_donation.form.Form;
 import nonprofit_donation.form.LoginForm;
 import nonprofit_donation.mainwindow.MainWindow;
+import nonprofit_donation.usermisc.AccountInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -77,6 +78,5 @@ public class LoginPanel extends AppPanel {
     public void setUserinfoPanel(JPanel panel) {
         panel_userinfo = panel;
     }
-
 
 }
