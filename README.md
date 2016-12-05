@@ -1,4 +1,4 @@
-#CSCI 4448 Gvining Donation APP 
+#CSCI 4448 Givining Donation APP 
 ####Groupmember:  
 Weipeng Cao, Zhi Li, Ming Liew, James Huynh
 
