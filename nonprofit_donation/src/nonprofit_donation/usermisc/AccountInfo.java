@@ -51,4 +51,13 @@ public class AccountInfo {
     public String prepareTitle() {
         return accTypeToString() + ": " + getUsername();
     }
+
+    public static String isValid(AccountInfo accinfo) {
+        String usrname = accinfo.getUsername();
+        String pwd = accinfo.getPassword();
+        if(usrname.isEmpty() | pwd.isEmpty()) return "Invalid: Empty field(s)";
+        if(!usrname.matches("..*@..*\\...*"))
+            return "username is invalid.";
+        return "";
+    }
 }
