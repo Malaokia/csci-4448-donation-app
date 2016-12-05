@@ -2,8 +2,7 @@ package nonprofit_donation.mainwindow;
 
 import java.awt.Dimension;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import nonprofit_donation.controller.Controller;
 import nonprofit_donation.dialog.EventDialog;
@@ -75,10 +74,27 @@ public class MainWindow extends JFrame implements Controller {
         JPanel panel = new HomePanel(this);
         setTitle(accinfo.prepareTitle());
         setPanel(panel);
+        greetting();
     }
     @Override
     public void donate() {
 
+    }
+
+    private void greetting() {
+        JDialog dialog = new JDialog(this);
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
+        JLabel label1 = new JLabel("Hello, " + accinfo.getUsername());
+        JLabel label2 = new JLabel("Thank you for using this Application.");
+        panel.add(label1);
+        panel.add(label2);
+        dialog.setContentPane(panel);
+        dialog.pack();
+        
+        dialog.setLocationRelativeTo(this);
+        dialog.setVisible(true);
     }
 
     @Override

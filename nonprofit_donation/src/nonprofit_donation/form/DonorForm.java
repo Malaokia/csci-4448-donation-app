@@ -6,6 +6,7 @@ import nonprofit_donation.panel.RegPanel;
 import nonprofit_donation.panel.UserInfoPanel;
 import nonprofit_donation.usermisc.AccountInfo;
 import nonprofit_donation.usermisc.DonorProfile;
+import nonprofit_donation.usermisc.Profile;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -20,7 +21,7 @@ import java.awt.event.ActionListener;
  */
 
 public class DonorForm extends Form {
-    DonorProfile profile;
+    Profile profile;
     //AccountInfo accinfo;
     UserInfoPanel userinfo_panel;
 

@@ -52,7 +52,24 @@ public class LoginForm extends Form {
         }
         else {
             System.out.println(acc_info.getUsername()+","+acc_info.getPassword());
+            AccountInfo accinfo = new AccountInfo();
+            userinfo_panel.getUserInput(accinfo);
+            String msg = AccountInfo.isValid(accinfo);
+            if(msg.length() > 0) {
+                userinfo_panel.setTipLabel(msg);
+            }
+            else {
+                if(!findUser())
+                    userinfo_panel.setTipLabel("User doesn't exist.");
+                else
+                    return true;
+            }
         }
+        return false;
+    }
+
+    public boolean findUser() {
+        System.out.println("Connect to Database(not implemented)....");
         return false;
     }
 

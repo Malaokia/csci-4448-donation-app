@@ -1,6 +1,9 @@
 package nonprofit_donation.form;
 
 import database.Query;
+import nonprofit_donation.panel.RegPanel;
+import nonprofit_donation.panel.UserInfoPanel;
+import nonprofit_donation.usermisc.OrgProfile;
 import nonprofit_donation.usermisc.Profile;
 
 import javax.swing.*;
@@ -11,10 +14,17 @@ import javax.swing.*;
 
 public class OrgForm extends Form {
     Profile profile;
+    UserInfoPanel userinfo_panel;
+
+    public OrgForm() {
+        profile = new OrgProfile();
+        userinfo_panel = new UserInfoPanel();
+    }
 
     @Override
     public void constructPanel(JPanel panel) {
-
+        ((RegPanel)panel).setUserInfopanel(userinfo_panel.getPanel());
+        profile.constructPanel(panel);
     }
 
     @Override
