@@ -92,7 +92,7 @@ public class MainWindow extends JFrame implements Controller {
         panel.add(label2);
         dialog.setContentPane(panel);
         dialog.pack();
-        
+
         dialog.setLocationRelativeTo(this);
         dialog.setVisible(true);
     }
