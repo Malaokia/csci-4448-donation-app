@@ -141,7 +141,7 @@ public class DonationPanel extends javax.swing.JFrame {
 
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
        try {
-           int donationNumber = Integer.parseInt ( this.field.getText());
+           int donationNumber = Integer.parseInt (this.field.getText());
        }
         catch (Exception e){
             JOptionPane.showMessageDialog(this, "Invalid entry", "Error Message",JOptionPane.ERROR_MESSAGE );
